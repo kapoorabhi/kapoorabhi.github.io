@@ -20,6 +20,7 @@ ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
+    padding: 4px;
 }
 
 hr {
@@ -45,12 +46,25 @@ h2 {
     height: 100%;
 }
 
+footer {
+    display: flex;
+    padding: 0.5rem 1rem;
+    z-index: 99;
+    justify-content: center;
+    flex-basis: 100%;
+    border-top: 1px solid #c3c3c3;
+}
+
+footer .social-media {
+    display: none;
+}
+
 /* page header */
 header {
     display: flex;
     flex-basis: 100%;
     flex-grow: 1;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background-color: #d8d8d8;
     z-index: 99;
     box-shadow: 0px 3px 7px 0 #ababab;
@@ -252,7 +266,7 @@ section.roles ul {
 
 section.roles ul li{
     list-style-type: devanagari;
-    padding: 2px;
+    padding: 4px;
 }
 
 
@@ -279,8 +293,9 @@ section.roles ul li{
 
     header .social-media {
         order: 1;
-        padding: 1rem 0;
+        padding: 0;
         flex-basis: 100%;
+        display: none;
     }
 
     header .social-media ul{
@@ -290,12 +305,16 @@ section.roles ul li{
         flex-basis: 100%;
     }
 
+    footer .social-media {
+        display: flex;
+    }
+
     header .logo {
         display: none;
     }
 
     .content-container {
-        margin-top: 180px;
+        margin-top: 90px;
     }
 
     .content-container > section {
