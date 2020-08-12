@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    background-color: #2b2b2b;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+hr {
+    display: flex;
+    width: 100%;
+    margin: 2rem 0;
+    background-color: #c3c3c3;
+    height: 1px;
+    border: none;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #d8d8d8;
+    width: 100%;
+    height: 100%;
+}
+
+/* page header */
+header {
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+    background-color: #d8d8d8;
+    z-index: 99;
+    box-shadow: 0px 3px 7px 0 #ababab;
+}
+
+header > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+}
+
+.header-text {
+    padding: 0.625rem 0;
+}
+
+.header-text h1, .header-text span {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+}
+
+.header-text span {
+    font-style: italic;
+}
+
+header .social-media {
+    justify-content: flex-end;
+    padding: 0.625rem 0;
+}
+
+.social-media ul {
+    display: flex;
+    list-style: none;
+}
+
+.social-media ul li{
+    display: inline-flex;
+}
+
+.social-media ul li a{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-left:15px;
+}
+
+.social-media ul li a.github{
+    background-image: url("images/svg/github.svg");
+    background-position: 0px 0px;
+    background-size: 40px 40px;
+}
+
+.social-media ul li a.linkedin{
+    background-image: url("images/svg/linkedin.svg");
+    background-position: 3px 1px;
+    background-size: 36px 36px;
+}
+
+.social-media ul li a.instagram{
+    background-image: url("images/svg/instagram.svg");
+    background-position: 2px 2px;
+    background-size: 37px 37px;
+}
+
+.social-media ul li a.facebook{
+    background-image: url("images/svg/facebook.svg");
+    background-position: 0px 0px;
+    background-size: 40px 40px;
+}
+
+.social-media ul li a.twitter{
+    background-image: url("images/svg/twitter.svg");
+    background-position: 3px 3px;
+    background-size: 36px 36px;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+    height: calc(100% - 90px);
+    padding: 1rem;
+    flex-wrap: wrap;
+    /* padding-top: 90px; */
+}
+
+/* page content */
+.content-container > section {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+}
+
+.content-container > section:nth-of-type(odd) {
+    border-right: 1px solid #c3c3c3;
+}
+
+/* Left Section [Timeline] */
+.content-container > section article {
+    position: relative;
+    padding: 0rem 2rem;
+    border-left: 3px solid black;
+    border-left-style: dashed;
+    min-height: 80px;
+}
+
+.content-container > section article:last-child {
+    border: none;
+}
+
+.content-container > section article:last-child::before {
+    left: -8px;
+}
+
+.content-container > section article:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 3px black solid;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+}
+
+.content-container > section article:last-child:after {
+    content: '\2708';
+    position: absolute;
+    left: -26px;
+    top: -55px;
+    transform: rotate(-90deg);
+    font-size: 25px;
+}
+
+.content-container > section article h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.content-container > section article > div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 2px 0;
+    width: 80%;
+}
+
+.content-container > section article > div span:first-child {
+    font-style: italic;
+}
+
+
+/* Section Picture */
+
+section.picture {
+
+}
+
+.picture .picture-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.83em;
+    height: 100%;
+}
+
+.picture .picture-container img {
+    width: 300px;
+    border: 10px solid #b2ac45;
+    opacity: 0.8;
+}
+
+.picture .picture-container img:hover {
+    opacity: 1;
+    cursor: default;
+    box-shadow: 2px 4px 12px 6px #bdbdbd;
+    transition: all 0.2s ease-in-out;
+} 
+
+/* Right Section [Roles] */
+section.roles {
+    
+}
+
+section.roles ul {
+    padding: 0 2rem;
+}
+
+section.roles ul li{
+    list-style-type: devanagari;
+    padding: 2px;
+}
+
+section.projects {
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .page-container {
+
+    }
+    header {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    header .header-text {
+        order: 2;
+        flex-basis: 100%;
+    }
+
+    header .social-media {
+        order: 1;
+        padding: 1rem 0;
+        flex-basis: 100%;
+    }
+
+    header .social-media ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    .content-container > section {
+        flex-basis: 100%;
+        border: none !important;
+    }
+}
