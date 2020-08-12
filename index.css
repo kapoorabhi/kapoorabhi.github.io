@@ -208,23 +208,19 @@ header .social-media {
 
 
 /* Section Picture */
-
-section.picture {
-
-}
-
 .picture .picture-container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 0.83em;
     height: 100%;
+    position: relative;
 }
 
 .picture .picture-container img {
     width: 300px;
-    border: 10px solid #b2ac45;
-    opacity: 0.8;
+    border: 10px solid #85a698;
+    opacity: 0.7;
 }
 
 .picture .picture-container img:hover {
@@ -234,11 +230,18 @@ section.picture {
     transition: all 0.2s ease-in-out;
 } 
 
-/* Right Section [Roles] */
-section.roles {
-    
+.picture .picture-container:after{
+    content: '\2192';
+    position: absolute;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+    left: 52px;
+    transform: rotate(45deg);
+    font-size: 3rem;
 }
 
+/* Right Section [Roles] */
 section.roles ul {
     padding: 0 2rem;
 }
@@ -248,24 +251,20 @@ section.roles ul li{
     padding: 2px;
 }
 
-section.projects {
-
-}
-
-
-
 
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
-    .page-container {
-
-    }
+ 
     header {
         width: 100%;
         height: auto;
         flex-wrap: wrap;
+    }
+
+    hr {
+        margin: 1rem 0;
     }
 
     header .header-text {
@@ -293,5 +292,17 @@ section.projects {
     .content-container > section {
         flex-basis: 100%;
         border: none !important;
+    }
+
+    .content-container > section article {
+        padding-right: 0;
+    }
+
+    .content-container > section article h4 {
+        margin-bottom: 0.4rem;
+    }
+
+    .content-container > section article > div {
+        width: 100%;
     }
 }
