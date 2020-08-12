@@ -133,7 +133,7 @@ header .social-media {
 .content-container {
     display: flex;
     flex: 1;
-    height: calc(100% - 90px);
+    /* height: calc(100% - 90px); */
     padding: 1rem;
     flex-wrap: wrap;
     /* padding-top: 90px; */
@@ -185,6 +185,10 @@ header .social-media {
     position: absolute;
     left: -26px;
     top: -55px;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
     font-size: 25px;
 }
@@ -207,7 +211,7 @@ header .social-media {
 }
 
 
-/* Section Picture */
+/* Left Section [Picture] */
 .picture .picture-container {
     display: flex;
     align-items: center;
@@ -230,7 +234,7 @@ header .social-media {
     transition: all 0.2s ease-in-out;
 } 
 
-.picture .picture-container:after{
+/* .picture .picture-container:after{
     content: '\2192';
     position: absolute;
     top: -20px;
@@ -239,7 +243,7 @@ header .social-media {
     left: 52px;
     transform: rotate(45deg);
     font-size: 3rem;
-}
+} */
 
 /* Right Section [Roles] */
 section.roles ul {
@@ -261,6 +265,7 @@ section.roles ul li{
         width: 100%;
         height: auto;
         flex-wrap: wrap;
+        position: fixed;
     }
 
     hr {
@@ -287,6 +292,10 @@ section.roles ul li{
 
     header .logo {
         display: none;
+    }
+
+    .content-container {
+        margin-top: 180px;
     }
 
     .content-container > section {
