@@ -172,7 +172,7 @@ header .social-media {
     padding: 0rem 2rem;
     border-left: 3px solid black;
     border-left-style: dashed;
-    min-height: 80px;
+    min-height: 110px;
 }
 
 .content-container > section article:last-child {
@@ -216,12 +216,13 @@ header .social-media {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    margin: 2px 0;
-    width: 80%;
+    margin: 2px 0 4px 0;
+
 }
 
 .content-container > section article > div span:first-child {
     font-style: italic;
+    padding-right: 1rem;
 }
 
 
@@ -262,12 +263,15 @@ header .social-media {
 /* Right Section [Roles] */
 section.roles ul {
     padding: 0 2rem;
+    list-style: none;
+    padding-left: 1rem;
+    text-indent: -1.3rem;
 }
 
 section.roles ul li{
-    list-style-type: devanagari;
     padding: 4px;
 }
+
 
 
 @media screen and (max-width: 768px) {
