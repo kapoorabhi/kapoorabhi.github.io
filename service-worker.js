@@ -1,7 +1,7 @@
 let version = 'v1::';
 
 self.addEventListener('install', function(event) {
-    console.lof('WORKER:: install event in progress!!');
+    console.log('WORKER:: install event in progress!!');
 
     event.waitUntil(
         /*
