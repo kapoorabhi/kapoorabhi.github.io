@@ -24,7 +24,6 @@ self.addEventListener('install', function(event) {
             */
            return cache.addAll([
                '/',
-               'images',
                'index.css',
                'index.js'
            ]);
@@ -56,7 +55,10 @@ self.addEventListener('fetch', function(event) {
 
     event.respondWith(
         caches
-
+        /* This method returns a promise that resolves to a cache entry matching
+            the request. Once the promise is settled, we can then provide a response
+            to the fetch request.
+        */
         .match(event.request)
         .then(function(cached) {
             console.log("WORKER:: CACHED in fetch event:::",cached);
